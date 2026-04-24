@@ -46,9 +46,6 @@ pd.read_sql("""SELECT * FROM planets; """, conn1)
 # ### Step 1
 # Return all the columns for planets that have 0 moons.
 
-# In[52]:
-
-
 # CodeGrade step1
 # Replace None with your code
 df_no_moons = pd.read_sql("""SELECT * FROM planets WHERE num_of_moons = 0;""", conn1)
@@ -56,8 +53,6 @@ df_no_moons = pd.read_sql("""SELECT * FROM planets WHERE num_of_moons = 0;""", c
 
 # ### Step 2
 # Return the name and mass of each planet that has a name with exactly 7 letters. Avoid hard coding this filter subset as much as possible.
-
-# In[53]:
 
 
 # CodeGrade step2
@@ -83,12 +78,9 @@ df_mass = pd.read_sql("""SELECT name, mass FROM planets WHERE mass <= 1;""", con
 # 
 # Return all the columns for planets that have at least one moon and a mass less than 1.00.
 
-# In[55]:
-
-
 # CodeGrade step4
 # Replace None with your code
-df_mass_moon = pd.read_sql("""SELECT name, mass FROM planets WHERE mass < 1 AND num_of_moons > 0;""", conn1)
+df_mass_moon = pd.read_sql("""SELECT * FROM planets WHERE mass < 1 AND num_of_moons > 0;""", conn1)
 
 
 # ### Step 5
